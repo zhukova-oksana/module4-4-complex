@@ -1,8 +1,14 @@
 'use strict';
 
+const num1 = +prompt('Введите первое число');
+const num2 = +prompt('Введите второе число');
+
 const getMinNumber = (num1, num2) => {
-  let minNumber = (num1 < num2) ? num1 : num2;
+  // let minNumber = (num1 < num2) ? num1 : num2;
+  let minNumber = ((num1 + num2) - Math.abs(num1 - num2)) / 2;
   return minNumber;
 }
 
-console.log(getMinNumber(10, 5));
+const result = getMinNumber(num1, num2);
+
+console.log(`Число ${result} меньше`);
